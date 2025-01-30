@@ -1,0 +1,58 @@
+@import '../../../node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+
+.pdf-container {
+  position: relative;
+}
+
+.feature-guides {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.guide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+}
+
+.guide-item:nth-child(1) {
+    left: 0px;  /* Open file 按钮位置 */
+  }
+  
+  .guide-item:nth-child(2) {
+    left: 88%;   /* Edit 按钮位置 */
+    transform: translateX(-50%);
+  }
+  
+  .guide-item:nth-child(3) {
+    right: 0px; /* Save 按钮位置 */
+  }
+
+.guide-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.arrow-down {
+  font-size: 24px;
+  color: #1976d2;
+  font-weight: bold;
+  margin-top: 8px;
+  position: absolute;
+  z-index: 1;
+}
+

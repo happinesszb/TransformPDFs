@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://transformpdfs.com
+
+# Sitemaps
+Sitemap: https://transformpdfs.com/sitemap.xml
+Sitemap: https://transformpdfs.com/api/sitemap.xml
