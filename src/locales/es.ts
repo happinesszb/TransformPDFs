@@ -101,7 +101,7 @@ export default {
       exploreTools: "Explorar todas las herramientas PDF"
     },
     toolsSection: {
-      title: "Kit completo de herramientas PDF a tu servicio",
+      title: "Kit completo de herramientas PDF de código abierto",
       subtitle: "Accede instantáneamente a nuestra suite completa de herramientas PDF. ¡Todo es GRATUITO y fácil de usar! Transforma tus PDFs sin esfuerzo - desde la fusión y división hasta la compresión y conversión de formato."
     }
   },

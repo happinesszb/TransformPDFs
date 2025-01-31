@@ -94,14 +94,14 @@ export default {
     }
   },
   home: {
-    title: "Tornamos o PDF fácil",
+    title: "As ferramentas de PDF mais poderosas e de código aberto",
     description: "Todas as ferramentas necessárias para ser mais produtivo e trabalhar de forma mais inteligente com documentos",
     buttons: {
       startTrial: "Iniciar teste gratuito",
       exploreTools: "Explorar todas as ferramentas PDF"
     },
     toolsSection: {
-      title: "Kit completo de ferramentas PDF ao seu dispor",
+      title: "Kit de ferramentas PDF completo de código aberto",
       subtitle: "Acesse instantaneamente nossa suíte completa de ferramentas PDF. Tudo é GRATUITO e fácil de usar! Transforme seus PDFs sem esforço - da mesclagem e divisão à compressão e conversão de formato."
     }
   },

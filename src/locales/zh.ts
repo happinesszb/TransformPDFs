@@ -94,14 +94,14 @@ export default {
     } 
   },
   home: {
-    title: "让PDF处理变得简单",
-    description: "为您提供提升文档处理效率的智能工具",
+    title: "最强大的开源PDF工具",
+    description: "在开源PDF工具中，目前我们是最全面、最强大的PDF工具，可以轻松完成PDF转换、压缩、合并等操作。",
     buttons: {
       startTrial: "免费试用",
       exploreTools: "探索所有PDF工具"
     },
     toolsSection: {
-      title: "专业PDF工具，随时待命",
+      title: "完整的开源PDF工具包",
       subtitle: "立即使用我们全面的PDF工具套件。所有功能完全免费且操作简单！轻松处理PDF文件 - 从合并拆分到压缩转换，一应俱全。"
     }
   },

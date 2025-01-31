@@ -101,7 +101,7 @@ export default {
       exploreTools: "Découvrir tous les outils PDF"
     },
     toolsSection: {
-      title: "Suite complète d'outils PDF à votre service",
+      title: "Boîte à outils PDF open source complète",
       subtitle: "Accédez instantanément à notre gamme complète d'outils PDF. Tout est GRATUIT et intuitif ! Transformez vos PDF sans effort - de la fusion à la conversion, en passant par la compression."
     }
   },

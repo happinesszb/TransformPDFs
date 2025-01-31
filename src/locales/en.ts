@@ -94,15 +94,15 @@ export default {
     }
   },
   home: {
-    title: "We make PDF easy",
-    description: "All the tools you'll need to be more productive and work smarter with documents",
+    title: "The most powerful and open-source PDF tools",
+    description: "Among the open-source PDF tools, it is currently the most versatile and the best tool for converting PDF to Office documents.",
     buttons: {
       startTrial: "Start Free Trial",
       exploreTools: "Explore All PDF Tools"
     },
     toolsSection: {
-      title: "Complete PDF toolkit at your service",
-      subtitle: "Access our comprehensive suite of PDF tools instantly. Everything is FREE and user-friendly! Transform your PDFs effortlessly - from merging and splitting to compression and format conversion."
+      title: "Complete open-source PDF toolkit",
+      subtitle: "Access our comprehensive suite of PDF tools instantly. Everything is FREE and open-source! Transform your PDFs effortlessly - from merging and splitting to compression and format conversion."
     }
   },
   nav: {
