@@ -26,7 +26,7 @@ export default function PDFRotator() {
       
       await generateThumbnails(pdfDoc);
     } catch (error) {
-      console.error('缩略图出错', error);
+      console.error('error', error);
     } finally {
       setLoading(false);
     }
@@ -107,7 +107,7 @@ export default function PDFRotator() {
       URL.revokeObjectURL(url);
       window.location.reload();
     } catch (error) {
-      console.error('保存 PDF 时出错:', error);
+      console.error('err:', error);
     } finally {
       setLoading(false);
     }

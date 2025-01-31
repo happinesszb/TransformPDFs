@@ -27,7 +27,7 @@ export default function PDFExtractor() {
       
       await generateThumbnails(pdfDoc);
     } catch (error) {
-      console.error('加载 PDF 文件时出错:', error);
+      console.error('Loading PDF error:', error);
     } finally {
       setLoading(false);
     }
@@ -70,7 +70,7 @@ export default function PDFExtractor() {
       setThumbnailCanvases(canvases);
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error('生成缩略图时出错:', error);
+      console.error('Error:', error);
     }
   };
 
@@ -81,7 +81,7 @@ export default function PDFExtractor() {
       setLoading(true);
       
       if (mergeOutput) {
-        // 合并为一个PDF文件
+        // 
         const newDoc = await PDFDocument.create();
         const pages = await newDoc.copyPages(pdfDoc, selectedPages);
         pages.forEach(page => newDoc.addPage(page));
@@ -96,7 +96,7 @@ export default function PDFExtractor() {
         a.click();
         URL.revokeObjectURL(url);
       } else {
-        // 分别保存每个页面
+        
         for (const pageIndex of selectedPages) {
           const newDoc = await PDFDocument.create();
           const [page] = await newDoc.copyPages(pdfDoc, [pageIndex]);
@@ -115,7 +115,7 @@ export default function PDFExtractor() {
       }
       window.location.reload();
     } catch (error) {
-      console.error('提取 PDF 页时出错:', error);
+      console.error('Error:', error);
     } finally {
       setLoading(false);
     }
@@ -166,7 +166,7 @@ export default function PDFExtractor() {
                       }}
                     />
                   )}
-                  <div className="text-center mt-2">第 {i + 1} 页</div>
+                  <div className="text-center mt-2"> {i + 1} </div>
                 </div>
               </div>
             ))}

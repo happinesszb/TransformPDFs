@@ -31,7 +31,7 @@ export default function PDFWatermarker() {
     if (!pdfDoc) return;
     
     try {
-      // 创建一个新的PDF文档副本用于预览
+      // 
       const previewDoc = await PDFDocument.load(await pdfDoc.save());
       const pages = previewDoc.getPages();
       
@@ -55,7 +55,7 @@ export default function PDFWatermarker() {
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
       
-      // 清理旧的URL
+      // 
       if (pdfUrl) {
         URL.revokeObjectURL(pdfUrl);
       }
@@ -65,7 +65,7 @@ export default function PDFWatermarker() {
     }
   };
 
-  // 当水印设置改变时更新预览
+  // 
   useEffect(() => {
     updatePreview();
   }, [watermarkSettings]);
@@ -79,7 +79,7 @@ export default function PDFWatermarker() {
       const pdfDoc = await PDFDocument.load(arrayBuffer);
       setPdfDoc(pdfDoc);
       
-      // 初始预览
+      // 
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
@@ -96,7 +96,7 @@ export default function PDFWatermarker() {
     
     try {
       setLoading(true);
-      // 直接使用当前预览的PDF作为最终结果
+      // 
       const blob = await fetch(pdfUrl).then(r => r.blob());
       const url = URL.createObjectURL(blob);
       

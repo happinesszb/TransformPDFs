@@ -5,7 +5,7 @@ import { useLocale } from '@/hooks/useLocale';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation';
 
-// 语言选项配置
+
 const LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'zh', label: '中文' },
@@ -15,7 +15,6 @@ const LANGUAGES = [
   { code: 'pt', label: 'Português' }
 ];
 
-// 语言路径映射
 const LANGUAGE_PATHS = {
   en: '/en',
   zh: '/cn',
@@ -30,10 +29,10 @@ export default function Footer() {
   const { locale } = useLocale();
   const router = useRouter();
 
-  // 获取当前语言标签
+  // 
   const currentLanguage = LANGUAGES.find(lang => lang.code === locale)?.label || 'English';
 
-  // 处理语言切换
+  // 
   const handleLanguageChange = (langCode: keyof typeof LANGUAGE_PATHS) => {
     const newPath = LANGUAGE_PATHS[langCode];
     router.push(newPath);
@@ -43,9 +42,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* 左侧部分 */}
+       
         <div className="flex items-center space-x-6">
-          {/* 语言选择器 */}
+         
           <div className="relative">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -59,7 +58,7 @@ export default function Footer() {
               />
             </button>
 
-            {/* 语言选择下拉菜单 */}
+            
             {isLangMenuOpen && (
               <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-2 w-40">
                 {LANGUAGES.map((lang) => (
@@ -77,7 +76,7 @@ export default function Footer() {
             )}
           </div>
 
-          {/* 社交媒体链接 */}
+         
           <div className="flex items-center space-x-4">
             <Link href="#" className="text-gray-400 hover:text-gray-600">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -102,7 +101,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 右侧部分 */}
+       
         <div className="flex items-center space-x-6 text-sm text-gray-500">
           <Link href="/privacy" className="hover:text-gray-900">Privacy</Link>
           <span>|</span>

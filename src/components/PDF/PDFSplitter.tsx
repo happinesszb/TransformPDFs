@@ -69,7 +69,7 @@ export default function PDFSplitter() {
       setThumbnailCanvases(canvases);
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error('生成缩略图时出错:', error);
+      console.error('err:', error);
     }
   };
 
@@ -93,7 +93,7 @@ export default function PDFSplitter() {
         startPage = splitPoint;
       }
 
-      // 下载所有拆分后的文档
+      // 
       for (let i = 0; i < documents.length; i++) {
         const pdfBytes = await documents[i].save();
         const blob = new Blob([pdfBytes], { type: 'application/pdf' });
@@ -107,7 +107,7 @@ export default function PDFSplitter() {
         window.location.reload();
       }
     } catch (error) {
-      console.error('拆分 PDF 时出错:', error);
+      console.error('err:', error);
     } finally {
       setLoading(false);
     }

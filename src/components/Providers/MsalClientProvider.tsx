@@ -16,7 +16,7 @@ export default function MsalClientProvider({ children }: { children: ReactNode }
     }, []);
 
     if (!msalInstance) {
-        return null; // 或者显示加载状态
+        return null; // 
     }
 
     return (

@@ -75,7 +75,7 @@ export default function PDFCompressor() {
 
       setThumbnail(canvas);
     } catch (error) {
-      console.error('生成缩略图时出错:', error);
+      console.error('generating thumb image failed:', error);
     }
   };
 

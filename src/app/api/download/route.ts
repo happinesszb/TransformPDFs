@@ -30,6 +30,6 @@ export async function GET(request: NextRequest) {
 
 export const config = {
   api: {
-    responseLimit: false, // 取消默认的响应体大小限制
+    responseLimit: false, // 
   },
 }; 

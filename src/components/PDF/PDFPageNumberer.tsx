@@ -20,7 +20,7 @@ export default function PDFPageNumberer() {
       const pdfDoc = await PDFDocument.load(arrayBuffer);
       setPdfDoc(pdfDoc);
       
-      // 初始预览
+      // 
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
@@ -48,7 +48,7 @@ export default function PDFPageNumberer() {
         
         page.drawText(pageNumber, {
           x: (width - textWidth) / 2,
-          y: 30, // 距离底部30单位
+          y: 30, 
           size: fontSize,
           font: font,
           color: rgb(0, 0, 0),

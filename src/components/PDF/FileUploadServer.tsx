@@ -14,7 +14,7 @@ interface FileUploadServerProps {
 export default function FileUploadServer({ onFileSelect, convertType }: FileUploadServerProps) {
   const { t } = useLocale();
   
-  // 根据转换类型获取允许的文件类型
+  
   const getAcceptedFileTypes = (type: ConvertType) => {
     switch (type) {
       case 'pdftodoc':
@@ -53,7 +53,7 @@ export default function FileUploadServer({ onFileSelect, convertType }: FileUplo
     }
   };
 
-  // 获取支持的文件类型提示文本
+  
   const getSupportedFileText = (type: ConvertType) => {
     switch (type) {
       case 'pdftodoc':

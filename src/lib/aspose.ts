@@ -1,7 +1,7 @@
 import { generateUniqueFileName } from './managefilename';
 
 export async function convertFromPDFByAspose(file: File, email: string, convertType: string) {
-    // 检查环境变量
+    // 
     const clientId = process.env.ASPOSE_CLIENT_ID;
     const clientSecret = process.env.ASPOSE_CLIENT_SECRET;
 
@@ -9,7 +9,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
       throw new Error('The API is misconfigured');
     }
 
-    // 1. 获取访问令牌
+    // 1. 
     const tokenResponse = await fetch('https://api.aspose.cloud/connect/token', {
       method: 'POST',
       headers: {
@@ -30,7 +30,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
   
     const { access_token: accessToken } = await tokenResponse.json();
   
-    // 2. 准备转换
+    // 
     const uniqueFileName = generateUniqueFileName(file.name);
     let outputFileName: string;
     let convertUrl: string;
@@ -61,7 +61,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
     const convertFormData = new FormData();
     convertFormData.append('File', file);
   
-    // 3. 执行转换
+    // 
     const convertResponse = await fetch(convertUrl, {
       method: 'PUT',
       headers: {
@@ -82,7 +82,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
       }
     }
   
-    // 4. 下载转换后的文件
+    // 
     const downloadResponse = await fetch(`https://api.aspose.cloud/v3.0/pdf/storage/file/${encodeURIComponent(outPath)}`, {
       method: 'GET',
       headers: {
@@ -108,7 +108,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
   }
 
   export async function convertToPDFByAspose(file: File, email: string, convertType: string) {
-    // 检查环境变量
+    
     const clientId = process.env.ASPOSE_CLIENT_ID;
     const clientSecret = process.env.ASPOSE_CLIENT_SECRET;
 
@@ -116,7 +116,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
         throw new Error('The API is misconfigured');
     }
 
-    // 1. 获取访问令牌
+    // 
     const tokenResponse = await fetch('https://api.aspose.cloud/connect/token', {
         method: 'POST',
         headers: {
@@ -136,18 +136,18 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
 
     const { access_token: accessToken } = await tokenResponse.json();
 
-    // 2. 准备转换
+    // 
     const uniqueFileName = generateUniqueFileName(file.name);
     const outputFileName = `${uniqueFileName}.pdf`;
     const outPath = `TransformPDF/${outputFileName}`;
     
-    // 使用 Words API 进行转换
+    // 
     const convertUrl = `https://api.aspose.cloud/v4.0/words/convert?format=pdf&outPath=${encodeURIComponent(outPath)}`;
     
     const convertFormData = new FormData();
     convertFormData.append('File', file);
 
-    // 3. 执行转换
+    // 
     const convertResponse = await fetch(convertUrl, {
         method: 'PUT',
         headers: {
@@ -167,7 +167,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
         }
     }
 
-    // 4. 下载转换后的文件
+    // 
     const downloadResponse = await fetch(`https://api.aspose.cloud/v3.0/pdf/storage/file/${encodeURIComponent(outPath)}`, {
         method: 'GET',
         headers: {
@@ -191,7 +191,7 @@ export async function convertFromPDFByAspose(file: File, email: string, convertT
 }
 
 export async function OCRPDFByAspose(file: File, email: string, languages: string[] = ['eng']) {
-    // 检查环境变量
+    // 
     const clientId = process.env.ASPOSE_CLIENT_ID;
     const clientSecret = process.env.ASPOSE_CLIENT_SECRET;
 
@@ -199,7 +199,7 @@ export async function OCRPDFByAspose(file: File, email: string, languages: strin
       throw new Error('The API is misconfigured');
     }
 
-    // 1. 获取访问令牌
+    // 
     const tokenResponse = await fetch('https://api.aspose.cloud/connect/token', {
       method: 'POST',
       headers: {
@@ -220,12 +220,12 @@ export async function OCRPDFByAspose(file: File, email: string, languages: strin
   
     const { access_token: accessToken } = await tokenResponse.json();
   
-    // 2. 准备OCR转换
+    // 
     let uniqueFileName = generateUniqueFileName(file.name);
     uniqueFileName += '.pdf';
     const storage = 'TransformPDF';
     
-    // 首先上传文件到存储
+    // 
     const uploadUrl = `https://api.aspose.cloud/v3.0/pdf/storage/file/${encodeURIComponent(uniqueFileName)}`;
     const uploadFormData = new FormData();
     uploadFormData.append('File', file);
@@ -244,8 +244,8 @@ export async function OCRPDFByAspose(file: File, email: string, languages: strin
       throw new Error('Failed to upload file to storage');
     }
     
-    // 3. 执行OCR转换
-    // 将语言数组用逗号连接并进行URL编码
+    // 
+    // 
     const languageParam = encodeURIComponent(languages.join(','));
     const ocrUrl = `https://api.aspose.cloud/v3.0/pdf/${encodeURIComponent(uniqueFileName)}/ocr?lang=${languageParam}`;
     
@@ -269,7 +269,7 @@ export async function OCRPDFByAspose(file: File, email: string, languages: strin
       }
     }
   
-    // 4. 下载处理后的文件
+    // 
     const downloadResponse = await fetch(`https://api.aspose.cloud/v3.0/pdf/storage/file/${encodeURIComponent(uniqueFileName)}`, {
       method: 'GET',
       headers: {

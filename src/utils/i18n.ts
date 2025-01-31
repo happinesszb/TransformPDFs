@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import { locales, type LocaleKey, getTranslations } from './i18n-client'
 
-// 获取浏览器语言
+//  
 export async function getBrowserLocale(): Promise<LocaleKey> {
   try {
     const headersList = await headers()
@@ -18,7 +18,7 @@ export async function getBrowserLocale(): Promise<LocaleKey> {
   }
 }
 
-// 根据路径获取当前语言
+//  
 export async function getCurrentLocale(params: { lang: string }): Promise<LocaleKey> {
   const lang = await Promise.resolve(params.lang);
   
@@ -40,5 +40,5 @@ export async function getCurrentLocale(params: { lang: string }): Promise<Locale
   }
 }
 
-// 重新导出所需的内容
+//  
 export { locales, type LocaleKey, getTranslations }

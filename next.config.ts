@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     eslint: {
-        // 完全禁用 ESLint
+        //  Disable ESLint
         ignoreDuringBuilds: true,
       },
       typescript: {
-        // 同时禁用 TypeScript 类型检查
+        //  
         ignoreBuildErrors: true,
       },
       images: {

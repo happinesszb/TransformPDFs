@@ -6,14 +6,13 @@ import { updateTaskStatus, setTaskFile } from '@/lib/taskStatus';
 
 export async function POST(request: NextRequest) {
   try {
-    // 从 Accept-Language 获取用户语言偏好
+    
     const acceptLanguage = request.headers.get('Accept-Language') || 'en';
-    // 获取第一个语言代码，例如 'zh-CN,zh;q=0.9' 会得到 'zh'
     const userLang = acceptLanguage.split(',')[0].split('-')[0];
     
-    // 支持的语言列表
+    // 
     const supportedLangs = ['en', 'zh', 'ar', 'fr', 'es', 'pt'];
-    // 如果用户语言不在支持列表中，使用默认语言 'en'
+    //  'en'
     const lang = supportedLangs.includes(userLang) ? userLang : 'en';
     const locale = await getCurrentLocale({ lang });
 
@@ -23,10 +22,10 @@ export async function POST(request: NextRequest) {
     const token = formData.get('token') as string;
     const convertType = formData.get('convertType') as string;
 
-    // 获取压缩级别参数
+    // 
     const compressLevel = (formData.get('compressLevel') as string || 'low') as 'low' | 'recommended' | 'extreme';
     
-    // 获取OCR语言参数
+    // 
     let languages: string[] = ['eng'];
     if (convertType === 'ocrpdf') {
       const languagesStr = formData.get('languages');
@@ -35,7 +34,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // 获取密码参数
+    // 
     const password = formData.get('password') as string || '';
 
     if (!file || !email || !token || !convertType) {
@@ -44,13 +43,13 @@ export async function POST(request: NextRequest) {
 
     
 
-    // 生成任务ID
+    // 
     const taskId = crypto.randomUUID();
     
-    // 立即返回任务ID
+    // 
     updateTaskStatus(taskId, { status: 'pending' });
     
-    // 异步执行转换
+    // 
     (async () => {
       try {
         updateTaskStatus(taskId, { status: 'processing' });
@@ -63,13 +62,13 @@ export async function POST(request: NextRequest) {
         } else if (convertType === 'ocrpdf') {
           ({ file: convertedFile, fileName } = await OCRPDFByAspose(file, email, languages));
         } else if (convertType === 'encryptpdf' || convertType === 'unlockpdf') {
-          // 处理 PDF 加密和解密
+          // 
           ({ file: convertedFile, fileName } = await convertByilovePDF(file, email, convertType, compressLevel, password));
         } else {
           ({ file: convertedFile, fileName } = await convertByilovePDF(file, email, convertType, compressLevel));
         }
 
-        // 获取文件扩展名和对应的Content-Type
+       
         const fileExtension = fileName.split('.').pop()?.toLowerCase() || 'pdf';
         const contentTypeMap: { [key: string]: string } = {
           'doc': 'application/msword',
@@ -84,7 +83,7 @@ export async function POST(request: NextRequest) {
         };
         const contentType = contentTypeMap[fileExtension] || 'application/octet-stream';
 
-        // 存储转换结果的元数据和文件
+        // 
         updateTaskStatus(taskId, { 
           status: 'completed',
           result: { 

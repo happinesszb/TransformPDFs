@@ -49,7 +49,7 @@ export default function PDFMerger() {
       URL.revokeObjectURL(url);
       return canvas;
     } catch (error) {
-      console.error('生成缩略图时出错:', error);
+      console.error('error:', error);
       return null;
     }
   };
@@ -70,7 +70,7 @@ export default function PDFMerger() {
       }
       setPdfFiles(newPdfFiles);
     } catch (error) {
-      console.error('处理文件时出错:', error);
+      console.error('error:', error);
     }
     setLoading(false);
   };
@@ -100,7 +100,7 @@ export default function PDFMerger() {
       URL.revokeObjectURL(url);
       window.location.reload();
     } catch (error) {
-      console.error('合并 PDF 时出错:', error);
+      console.error('error:', error);
     } finally {
       setLoading(false);
     }

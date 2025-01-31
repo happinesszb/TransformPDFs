@@ -1,7 +1,7 @@
 import { MongoClient, MongoClientOptions } from 'mongodb';
 
 if (!process.env.MONGODB_URI) {
-    throw new Error('请设置 MONGODB_URI 环境变量');
+    throw new Error('Please set the MONGODB_URI environment variable');
 }
 
 const options: MongoClientOptions = {
@@ -28,9 +28,9 @@ class Mongo {
                         const client = new MongoClient(process.env.MONGODB_URI!, options);
                         global._mongoClientPromise = client.connect();
                         
-                        // 添加错误处理
+                        //  
                         global._mongoClientPromise.catch(error => {
-                            console.error('MongoDB 连接错误:', error);
+                            console.error('MongoDB error:', error);
                             global._mongoClientPromise = undefined;
                             throw error;
                         });
@@ -41,13 +41,13 @@ class Mongo {
                     this.instance = client.connect();
                 }
 
-                // 测试连接
+                //  
                 const mongoClient = await this.instance;
                 await mongoClient.db().command({ ping: 1 });
-                console.log('MongoDB 连接成功');
+                console.log('MongoDB connect successfully');
                 
             } catch (error) {
-                console.error('MongoDB 连接失败:', error);
+                console.error('MongoDB connect failed:', error);
                 throw error;
             }
         }

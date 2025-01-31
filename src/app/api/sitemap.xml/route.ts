@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 
-  // 添加主页URL
+  // 
   languages.forEach(lang => {
     xml += `  <url>\n`
     xml += `    <loc>https://transformpdfs.com/${lang}</loc>\n`
@@ -39,7 +39,7 @@ export async function GET(request: NextRequest) {
     xml += `  </url>\n`
   })
 
-  // 添加工具页面URL
+  // 
   languages.forEach(lang => {
     tools.forEach(tool => {
       xml += `  <url>\n`
@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
       xml += `  </url>\n`
     })
 
-    // 添加定价页面
+    // 
     xml += `  <url>\n`
     xml += `    <loc>https://transformpdfs.com/${lang}/pricing</loc>\n`
     xml += `    <lastmod>${new Date().toISOString()}</lastmod>\n`
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
 
   xml += '</urlset>'
 
-  // 设置正确的响应头
+  // 
   return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',

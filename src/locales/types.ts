@@ -6,7 +6,7 @@ export interface LocaleType {
     description: string
   }
   
-  // 统一的工具定义
+  //  
   toolsbar: {
     mergePdf: {
       title: string
@@ -48,7 +48,7 @@ export interface LocaleType {
       title: string
       description: string
     }
-    // 新增的工具
+    //  
     pdfToJpg: {
       title: string
       description: string
@@ -397,5 +397,5 @@ export interface LocaleType {
   }
 }
 
-// 可以添加工具类型的辅助类型定义
+//  
 export type ToolKeys = keyof LocaleType['toolsbar'] 

@@ -1,10 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: "pdf-tools",      // 应用名称
-      script: "yarn",         // 使用yarn启动
-      args: "start",          // 运行 yarn start
-      cwd: "./",             // 项目目录
+      name: "pdf-tools",      //  
+      script: "yarn",         //  
+      args: "start",          //  
+      cwd: "./",             //  
       env: {
         NODE_ENV: "production",
         PORT: 3002

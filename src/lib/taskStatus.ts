@@ -1,4 +1,4 @@
-// 使用内存存储任务状态
+//  
 const taskStatus = new Map<string, {
   status: 'pending' | 'processing' | 'completed' | 'failed',
   result?: {
@@ -18,15 +18,15 @@ export function updateTaskStatus(taskId: string, status: {
   },
   error?: string
 }) {
-  console.log(`更新任务状态 - TaskID: ${taskId}, Status: ${status.status}`);
+  console.log(`Task status - TaskID: ${taskId}, Status: ${status.status}`);
   taskStatus.set(taskId, status);
   if (status.status === 'completed' && status.result) {
-    // 保持文件数据，并设置自动清理
+    //  
     setTimeout(() => {
-      console.log(`清理任务 - TaskID: ${taskId}`);
+      console.log(`clean task - TaskID: ${taskId}`);
       taskStatus.delete(taskId);
       taskFiles.delete(taskId);
-    }, 20 * 60 * 1000); // 20分钟后清理
+    }, 20 * 60 * 1000); //  
   }
 }
 
@@ -35,7 +35,7 @@ export function getTaskStatus(taskId: string) {
 }
 
 export function setTaskFile(taskId: string, file: Blob) {
-  console.log(`存储转换文件 - TaskID: ${taskId}`);
+  console.log(`save file - TaskID: ${taskId}`);
   taskFiles.set(taskId, file);
 }
 
