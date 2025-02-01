@@ -12,7 +12,7 @@ Before you begin, ensure you have the following:
 - Node.js and Yarn installed on your machine.
 - Access to the following services to obtain API keys:
   - Aspose
-  - iLovePDF
+  - iLoveapi
   - Syncfusion
 
 # Environment Variables Configuration
@@ -25,7 +25,7 @@ To run this project, you need to set up the following environment variables in `
   - `ASPOSE_CLIENT_SECRET=`
 
 
-## ilovepdf Keys
+## iloveapi Keys
 - Register at [iloveapi](https://iloveapi.com/) to get:
   - `ILOVEPDF_PUBLIC_KEY=`
   - `ILOVEPDF_SECRET_KEY=`
