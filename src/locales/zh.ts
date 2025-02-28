@@ -91,7 +91,75 @@ export default {
     unlockPdf: {
       title: "解密PDF",
       description: "移除PDF文件的密码保护"
-    } 
+    },
+    epubToPdf: {
+      title: "EPUB → PDF",
+      description: "将 EPUB 文件转换为 PDF，保留所有内容和格式。"
+    },
+    htmlToPdf: {
+      title: "HTML → PDF",
+      description: "将 MHT 或 MHTML 文件转换为 PDF，保留所有内容和格式。"
+    },
+    texToPdf: {
+      title: "Tex → PDF",
+      description: "将包含数学公式和图表的文档转换为 PDF，保留所有内容和格式。"
+    },
+    psToPdf: {
+      title: "PS → PDF",
+      description: "将 PostScript 文件转换为 PDF，保留所有内容和格式。"
+    },
+    xslfoToPdf: {
+      title: "XSLFO → PDF",
+      description: "将 XSL Formatting Objects 文件转换为 PDF，保留所有内容和格式。"
+    },
+    pclToPdf: {
+      title: "PCL → PDF",
+      description: "将 PCL 文件转换为 PDF。"
+    },
+    svgToPdf: {
+      title: "SVG → PDF",
+      description: "将 SVG 文件转换为 PDF。"
+    },
+    xmlToPdf: {
+      title: "XML → PDF",
+      description: "将 XML 文件转换为 PDF。"
+    },
+    mdToPdf: {
+      title: "Markdown → PDF",
+      description: "将 Markdown 文件转换为 PDF，保留所有内容和格式。"
+    },
+    pdfToHtml: {
+      title: "PDF → HTML",
+      description: "将 PDF 文档准确转换为 HTML 格式，保留布局、字体、图片和表格。"
+    },
+    pdfToEpub: {
+      title: "PDF → EPUB",
+      description: "将 PDF 文档准确转换为 EPUB 格式，保留电子书的布局。"
+    },
+    pdfToTiff: {
+      title: "PDF → TIFF",
+      description: "将 PDF 文档准确转换为 TIFF 格式。"
+    },
+    pdfToTex: {
+      title: "PDF → TEX",
+      description: "将 PDF 文档准确转换为 LaTeX 格式，保留原文档的布局。"
+    },
+    pdfToSvg: {
+      title: "PDF → SVG",
+      description: "将 PDF 文档转换为 SVG 格式。"
+    },
+    pdfToXml: {
+      title: "PDF → XML",
+      description: "将 PDF 文档准确转换为 XML 格式，保留布局、字体、图片和表格。"
+    },
+    pdfToMobi: {
+      title: "PDF → MOBI",
+      description: "将 PDF 文档准确转换为 MOBI 格式，保留布局，方便在电子阅读器上阅读。"
+    },
+    pdfToXps: {
+      title: "PDF → XPS",
+      description: "将 PDF 文档准确转换为 XPS 格式，保留布局和内容。"
+    }
   },
   home: {
     title: "最强大的开源PDF工具",

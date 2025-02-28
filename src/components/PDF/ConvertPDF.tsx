@@ -6,18 +6,7 @@ import FileUploadServer from './FileUploadServer';
 import { useLocale } from '@/hooks/useLocale';
 import Select from 'react-select';
 
-// Define conversion types
-type ConvertType = 
-  | 'pdftodoc' 
-  | 'pdftoexcel' 
-  | 'pdftoppt' 
-  | 'pdftojpg'
-  | 'doctopdf'
-  | 'exceltopdf'
-  | 'ppttopdf'
-  | 'jpgtopdf'
-  | 'ocrpdf'
-  | 'compresspdf';
+import { ConvertType } from '@/types/convert';
 
 // Define conversion status types
 type ConversionStatus = 'idle' | 'uploading' | 'converting' | 'downloading' | 'error';
@@ -89,28 +78,54 @@ export default function ConvertPDF({ convertType }: ConvertPDFProps) {
       ppttopdf: '.pdf',
       jpgtopdf: '.pdf',
       ocrpdf: '.pdf',
-      compresspdf: '.pdf'
+      compresspdf: '.pdf',
+      pdftohtml: '.zip',
+      pdftoepub: '.epub',
+      epubtopdf: '.pdf',
+      textopdf: '.pdf',
+      pstopdf: '.pdf',
+      xslfotopdf: '.pdf',
+      xpstopdf: '.pdf',
+      svgtopdf: '.pdf',
+      pcltopdf: '.pdf',
+      xmltopdf: '.pdf',
+      mdtopdf: '.pdf',
+      htmltopdf: '.pdf',
+      pdftotiff: '.tiff',
+      pdftotex: '.tex',
+      pdftosvg: '.svg',
+      pdftomobi: '.mobi',
+      pdftoxps: '.xps',
+      pdftoxml: '.xml'
     };
     return extensionMap[type];
   };
 
   const handleFileSelect = async (file: File) => {
-   
+    
 
     // Check file type
     const fileExtension = file.name.toLowerCase().split('.').pop();
     const allowedExtensions = {
       jpgtopdf: ['jpg', 'jpeg', 'png'],
-      // ... other conversion types' allowed extensions
+      epubtopdf: ['epub'],
+      textopdf: ['tex'],
+      pstopdf: ['ps'],
+      xslfotopdf: ['fo', 'xslfo'],
+      xpstopdf: ['xps'],
+      svgtopdf: ['svg'],
+      pcltopdf: ['pcl'],
+      xmltopdf: ['xml'],
+      mdtopdf: ['md', 'markdown'],
+      htmltopdf: [ 'mht', 'mhtml']
     };
 
-    if (convertType === 'jpgtopdf' && 
-      !allowedExtensions.jpgtopdf.includes(fileExtension || '')) {
-      alert('Please select an image file in JPG, JPEG, or PNG format');
+    const convertTypeMap: { [key: string]: string[] } = allowedExtensions;
+    if (convertType in convertTypeMap && 
+        !convertTypeMap[convertType].includes(fileExtension || '')) {
+      alert(`Please select a valid ${convertType.replace('topdf', '').toUpperCase()} file`);
       return;
     }
-
-    
 
     setPdfFile(file);
     await generateThumbnail(file);
@@ -211,8 +226,6 @@ export default function ConvertPDF({ convertType }: ConvertPDFProps) {
       // Prepare FormData
       const formData = new FormData();
       formData.append('File', pdfFile);
-      formData.append('email', 'busdev@zbshareware.com'); //I have removed the email and token which belong to the login module
-      formData.append('token', '39jfijeeif393ee9cj3');
       formData.append('convertType', convertType);
       
       if (convertType === 'compresspdf') {
@@ -433,9 +446,9 @@ export default function ConvertPDF({ convertType }: ConvertPDFProps) {
         </div>
       )}
 
-      
+     
 
-      
+     
     </div>
   );
 } 

@@ -1,6 +1,6 @@
 export default {
   metadata: {
-    title: "PDF Tools - Make PDF Easy",
+    title: "PDF Tools - Simplify your PDFs",
     description: "Professional PDF tools for everyone"
   },
   toolsbar: {
@@ -91,6 +91,74 @@ export default {
     unlockPdf: {
       title: "Unlock PDF",
       description: "Remove password protection from PDF files"
+    },
+    epubToPdf: {
+      title: "EPUB to PDF",
+      description: "Convert EPUB files to PDF while preserving all content and formatting."
+    },
+    htmlToPdf: {
+      title: "HTML to PDF",
+      description: "Convert MHT or MHTML files to PDF while preserving all content and formatting."
+    },
+    texToPdf: {
+      title: "Tex to PDF",
+      description: "Convert documents containing numerous mathematical formulas, charts, and complex layouts to PDF while preserving all content and formatting."
+    },
+    psToPdf: {
+      title: "PS to PDF",
+      description: "Convert PostScript files to PDF while preserving all content and formatting."
+    },
+    xslfoToPdf: {
+      title: "XSLFO to PDF",
+      description: "Convert XSL Formatting Objects (XSLFO) files to PDF while preserving all content and formatting."
+    },
+    pclToPdf: {
+      title: "PCL to PDF",
+      description: "Convert PCL files (Print Job Files) to PDF."
+    },
+    svgToPdf: {
+      title: "SVG to PDF",
+      description: "Convert SVG (Scalable Vector Graphics) files to PDF."
+    },
+    xmlToPdf: {
+      title: "XML to PDF",
+      description: "Convert XML (eXtensible Markup Language) files to PDF."
+    },
+    mdToPdf: {
+      title: "Markdown to PDF",
+      description: "Convert Markdown files to PDF while preserving all content and formatting."
+    },
+    pdfToHtml: {
+      title: "PDF to HTML",
+      description: "Accurately convert PDF documents to HTML format, preserving the layout, fonts, images, and tables of the original document."
+    },
+    pdfToEpub: {
+      title: "PDF to EPUB",
+      description: "Accurately convert PDF documents to EPUB format, preserving the layout for eBooks."
+    },
+    pdfToTiff: {
+      title: "PDF to TIFF",
+      description: "Accurately convert PDF documents to TIFF format (Tagged Image File Format)."
+    },
+    pdfToTex: {
+      title: "PDF to TEX",
+      description: "Accurately convert PDF documents to LaTeX format, preserving the layout of the original document."
+    },
+    pdfToSvg: {
+      title: "PDF to SVG",
+      description: "Convert PDF documents to SVG (Scalable Vector Graphics) format."
+    },
+    pdfToXml: {
+      title: "PDF to XML",
+      description: "Accurately convert PDF documents to XML format, preserving the layout, fonts, images, and tables of the original document."
+    },
+    pdfToMobi: {
+      title: "PDF to MOBI",
+      description: "Accurately convert PDF documents to MOBI format, preserving the layout for easy reading on e-readers."
+    },
+    pdfToXps: {
+      title: "PDF to XPS",
+      description: "Accurately convert PDF documents to XPS format (XML Paper Specification), preserving the layout and content of the original document."
     }
   },
   home: {
@@ -102,7 +170,7 @@ export default {
     },
     toolsSection: {
       title: "Complete open-source PDF toolkit",
-      subtitle: "Access our comprehensive suite of PDF tools instantly. Everything is FREE and open-source! Transform your PDFs effortlessly - from merging and splitting to compression and format conversion."
+      subtitle: "Access 38+ PDF tools instantly. Everything is FREE and open-source! Transform your PDFs effortlessly - from merging and splitting to compression and format conversion. We do not store your files and data after processing your files."
     }
   },
   nav: {
@@ -135,7 +203,7 @@ export default {
     },
     deletePages: {
       title: "Remove Pages From PDF",
-      description: "An online PDF editor that lets you remove pages from PDFs for free, without needing to sign up or install anything.",
+      description: "An online Open-Source PDF editor that lets you remove pages from PDFs for free, without needing to sign up or install anything. We do not store your files and data after processing your files.",
       selectMultiple: "You can select multiple pages",
       downloadInfo: "When you click the delete button, the modified PDF will be automatically downloaded. The original file will not be modified.",
       totalPages: "Total Pages",
@@ -143,7 +211,7 @@ export default {
     },
     compressPdf: {
       title: "Compress PDF",
-      description: "Compress PDF files online, quickly reduce file size for easy sharing and storage",
+      description: "Compress PDF files online with Open-Source Tool, quickly reduce file size for easy sharing and storage. We do not store your files and data after processing your files.",
       // ... 其他翻译
       compressionComplete: "Compression complete!",
       originalSize: "Original size",
@@ -159,7 +227,7 @@ export default {
     },
     splitPages: {
       title: "Split PDF",
-      description: "Split your PDF document into multiple files by selecting split points",
+      description: "Split your PDF document into multiple files by selecting split points with Open-Source Tool. We do not store your files and data after processing your files.",
       selectSplitPoints: "You can select multiple split points",
       downloadInfo: "When you click the split button, all parts will be automatically downloaded. The original file will not be modified.",
       totalPages: "Total Pages",
@@ -168,8 +236,8 @@ export default {
       processingMessage: "The PDF file is being processed..."
     },
     extractPages: {
-      title: "Extract PDF Pages",
-      description: "Extract selected pages from PDF documents, with options to merge into a new PDF or save separately",
+      title: "Extract PDF Pages with Open-Source Tool",
+      description: "Extract selected pages from PDF documents, with options to merge into a new PDF or save separately. We do not store your files and data after processing your files.",
       selectPages: "Select pages to extract",
       downloadInfo: "Check the pages you want to extract, choose to merge into one PDF or save pages separately",
       totalPages: "Total Pages",
@@ -180,7 +248,7 @@ export default {
     },
     rotatePdf: {
       title: "Rotate PDF",
-      description: "Rotate pages in your PDF document to the desired orientation",
+      description: "Rotate pages in your PDF document to the desired orientation with Open-Source Tool. We do not store your files and data after processing your files.",
       totalPages: "Total Pages",
       rotateButton: "Click to rotate 90° clockwise",
       processingMessage: "The PDF file is being processed...",
@@ -195,7 +263,7 @@ export default {
     },
     mergePages: {
       title: "Merge PDF Files",
-      description: "Combine multiple PDF files into a single PDF document",
+      description: "Combine multiple PDF files into a single PDF document with Open-Source Tool. We do not store your files and data after processing your files.",
       selectFiles: "Merge PDF Files",
       downloadInfo: "Drag thumbnails to adjust the merge order",
       totalFiles: "Selected files",
@@ -205,7 +273,7 @@ export default {
     },
     ocrPdf: {
       title: "PDF OCR - Convert Scanned PDF to Searchable Document",
-      description: "Convert scanned PDF documents to searchable and copyable PDF files, supporting multiple languages",
+      description: "Convert scanned PDF documents to searchable and copyable PDF files with Open-Source Tool and powerful OCR engine, supporting multiple languages. We do not store your files and data after processing your files.",
       selectLanguage: "Select Recognition Languages (Multiple Allowed)"
     },
     annotator: {
@@ -219,11 +287,11 @@ export default {
     },
     signPdf: {
       title: "Sign PDF",
-      description: "Add a handwritten signature, image stamp, or text signature to a PDF document"
+      description: "Add a handwritten signature, image stamp, or text signature to a PDF document. We do not store your files and data after processing your files."
     },
     watermarkPdf: {
       title: "Add Watermark to PDF",
-      description: "Add watermarks to your PDF documents to protect the content",
+      description: "Add watermarks to your PDF documents to protect the content with Open-Source Tool. We do not store your files and data after processing your files.",
       settings: {
         addWatermark: "Add Watermark",
         settings: "Settings",
@@ -237,13 +305,13 @@ export default {
     },
     pageNumberPdf: {
       title: "Add Page Numbers",
-      description: "Add page numbers to PDF documents for easy organization and reference",
+      description: "Add page numbers to PDF documents for easy organization and reference with Open-Source Tool. We do not store your files and data after processing your files.",
       processing: "Processing...",
       addPageNumbers: "Add Page Numbers"
     },
     encryptPdf: {
       title: "Encrypt PDF",
-      description: "Protect your PDF files with a password to ensure document security",
+      description: "Protect your PDF files with a password to ensure document security. We do not store your files and data after processing your files.",
       password: "Password",
       confirmPassword: "Confirm Password", 
       passwordMismatch: "Passwords do not match",
@@ -253,7 +321,7 @@ export default {
     },
     unlockPdf: {
       title: "Unlock PDF",
-      description: "Remove password protection from PDF files",
+      description: "Remove password protection from PDF files. We do not store your files and data after processing your files.",
       password: "Password",
       passwordRequired: "Password is required",
       wrongPassword: "Wrong password, please try again",
@@ -322,7 +390,7 @@ export default {
   },
   pricing: {
     title: "Simple Pricing Plans",
-    description: "Choose the plan that best fits your needs",
+    description: "We use one of the best engines in the industry for file conversion, and the best PDF file conversion engine requires us to pay them. In terms of file conversion quality, our tool is comparable to other most popular ones in the industry, but our price is cheaper than those of other most popular tools.",
     billingToggle: {
       monthly: "Monthly",
       yearly: "Yearly",

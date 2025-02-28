@@ -1,6 +1,6 @@
 export default {
   metadata: {
-    title: "أدوات PDF - نجعل PDF سهلاً",
+    title: "أدوات PDF - تبسيط ملفات PDF الخاصة بك",
     description: "أدوات PDF احترافية للجميع"
   },
   toolsbar: {
@@ -91,6 +91,74 @@ export default {
     unlockPdf: {
       title: "فك تشفير PDF",
       description: "إزالة حماية كلمة المرور من ملفات PDF"
+    },
+    epubToPdf: {
+      title: "EPUB → PDF",
+      description: "تحويل ملفات EPUB إلى PDF مع الحفاظ على كل المحتوى."
+    },
+    htmlToPdf: {
+      title: "HTML → PDF",
+      description: "تحويل ملفات MHT أو MHTML إلى PDF مع الحفاظ على كل المحتوى."
+    },
+    texToPdf: {
+      title: "Tex → PDF",
+      description: "تحويل المستندات التي تحتوي على صيغ ورسوم بيانية إلى PDF."
+    },
+    psToPdf: {
+      title: "PS → PDF",
+      description: "تحويل ملفات PostScript إلى PDF مع الحفاظ على كل المحتوى."
+    },
+    xslfoToPdf: {
+      title: "XSLFO → PDF",
+      description: "تحويل ملفات XSL Formatting Objects إلى PDF."
+    },
+    pclToPdf: {
+      title: "PCL → PDF",
+      description: "تحويل ملفات PCL إلى PDF."
+    },
+    svgToPdf: {
+      title: "SVG → PDF",
+      description: "تحويل ملفات SVG إلى PDF."
+    },
+    xmlToPdf: {
+      title: "XML → PDF",
+      description: "تحويل ملفات XML إلى PDF."
+    },
+    mdToPdf: {
+      title: "Markdown → PDF",
+      description: "تحويل ملفات Markdown إلى PDF."
+    },
+    pdfToHtml: {
+      title: "PDF → HTML",
+      description: "تحويل مستندات PDF إلى تنسيق HTML بدقة."
+    },
+    pdfToEpub: {
+      title: "PDF → EPUB",
+      description: "تحويل مستندات PDF إلى تنسيق EPUB بدقة."
+    },
+    pdfToTiff: {
+      title: "PDF → TIFF",
+      description: "تحويل مستندات PDF إلى تنسيق TIFF بدقة."
+    },
+    pdfToTex: {
+      title: "PDF → TEX",
+      description: "تحويل مستندات PDF إلى تنسيق LaTeX بدقة."
+    },
+    pdfToSvg: {
+      title: "PDF → SVG",
+      description: "تحويل مستندات PDF إلى تنسيق SVG."
+    },
+    pdfToXml: {
+      title: "PDF → XML",
+      description: "تحويل مستندات PDF إلى تنسيق XML بدقة."
+    },
+    pdfToMobi: {
+      title: "PDF → MOBI",
+      description: "تحويل مستندات PDF إلى تنسيق MOBI بدقة."
+    },
+    pdfToXps: {
+      title: "PDF → XPS",
+      description: "تحويل مستندات PDF إلى تنسيق XPS بدقة."
     }
   },
   home: {

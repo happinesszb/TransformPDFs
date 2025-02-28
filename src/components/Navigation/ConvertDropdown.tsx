@@ -59,7 +59,6 @@ export default function ConvertDropdown({ onClose }: ConvertDropdownProps) {
   }
 
   const toolCategories = [
-    
     {
       title: t.nav.categories.convertFromPdf,
       items: [
@@ -82,6 +81,46 @@ export default function ConvertDropdown({ onClose }: ConvertDropdownProps) {
           toolKey: 'pdfToJpg' as ToolKeys,
           icon: "image", 
           href: "/tools/pdf-to-jpg"
+        },
+        { 
+          toolKey: 'pdfToHtml' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-html"
+        },
+        { 
+          toolKey: 'pdfToEpub' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-epub"
+        },
+        { 
+          toolKey: 'pdfToTiff' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-tiff"
+        },
+        { 
+          toolKey: 'pdfToTex' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-tex"
+        },
+        { 
+          toolKey: 'pdfToSvg' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-svg"
+        },
+        { 
+          toolKey: 'pdfToXml' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-xml"
+        },
+        { 
+          toolKey: 'pdfToMobi' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-mobi"
+        },
+        { 
+          toolKey: 'pdfToXps' as ToolKeys,
+          icon: "epub", 
+          href: "/tools/pdf-to-xps"
         }
       ]
     },
@@ -107,10 +146,54 @@ export default function ConvertDropdown({ onClose }: ConvertDropdownProps) {
           toolKey: 'jpgToPdf' as ToolKeys,
           icon: "image",
           href: "/tools/jpg-to-pdf"
+        },
+        {
+          toolKey: 'epubToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/epub-to-pdf"
+        },
+        {
+          toolKey: 'htmlToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/html-to-pdf"
+        },
+        {
+          toolKey: 'texToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/tex-to-pdf"
+        },
+        {
+          toolKey: 'psToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/ps-to-pdf"
+        },
+        {
+          toolKey: 'xslfoToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/xslfo-to-pdf"
+        },
+        {
+          toolKey: 'pclToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/pcl-to-pdf"
+        },
+        {
+          toolKey: 'svgToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/svg-to-pdf"
+        },
+        {
+          toolKey: 'xmlToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/xml-to-pdf"
+        },
+        {
+          toolKey: 'mdToPdf' as ToolKeys,
+          icon: "epub",
+          href: "/tools/md-to-pdf"
         }
       ]
     }
-    
   ] as const;
 
   return (

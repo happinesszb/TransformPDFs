@@ -27,6 +27,7 @@
     "@types/mongodb": "^4.0.7",
     "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dropzone": "^5.1.0",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.7.9",
     "browser-image-compression": "^2.0.2",
     "formidable": "^3.5.2",

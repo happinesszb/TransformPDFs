@@ -91,6 +91,74 @@ export default {
     unlockPdf: {
       title: "Descriptografar PDF",
       description: "Remover proteção por senha de arquivos PDF"
+    },
+    epubToPdf: {
+      title: "EPUB → PDF",
+      description: "Converta arquivos EPUB para PDF preservando todo o conteúdo."
+    },
+    htmlToPdf: {
+      title: "HTML → PDF",
+      description: "Converta arquivos MHT ou MHTML para PDF preservando todo o conteúdo."
+    },
+    texToPdf: {
+      title: "Tex → PDF",
+      description: "Converta documentos com fórmulas e gráficos para PDF."
+    },
+    psToPdf: {
+      title: "PS → PDF",
+      description: "Converta arquivos PostScript para PDF preservando todo o conteúdo."
+    },
+    xslfoToPdf: {
+      title: "XSLFO → PDF",
+      description: "Converta arquivos XSL Formatting Objects para PDF."
+    },
+    pclToPdf: {
+      title: "PCL → PDF",
+      description: "Converta arquivos PCL para PDF."
+    },
+    svgToPdf: {
+      title: "SVG → PDF",
+      description: "Converta arquivos SVG para PDF."
+    },
+    xmlToPdf: {
+      title: "XML → PDF",
+      description: "Converta arquivos XML para PDF."
+    },
+    mdToPdf: {
+      title: "Markdown → PDF",
+      description: "Converta arquivos Markdown para PDF."
+    },
+    pdfToHtml: {
+      title: "PDF → HTML",
+      description: "Converta documentos PDF para formato HTML."
+    },
+    pdfToEpub: {
+      title: "PDF → EPUB",
+      description: "Converta documentos PDF para formato EPUB."
+    },
+    pdfToTiff: {
+      title: "PDF → TIFF",
+      description: "Converta documentos PDF para formato TIFF."
+    },
+    pdfToTex: {
+      title: "PDF → TEX",
+      description: "Converta documentos PDF para formato LaTeX."
+    },
+    pdfToSvg: {
+      title: "PDF → SVG",
+      description: "Converta documentos PDF para formato SVG."
+    },
+    pdfToXml: {
+      title: "PDF → XML",
+      description: "Converta documentos PDF para formato XML."
+    },
+    pdfToMobi: {
+      title: "PDF → MOBI",
+      description: "Converta documentos PDF para formato MOBI."
+    },
+    pdfToXps: {
+      title: "PDF → XPS",
+      description: "Converta documentos PDF para formato XPS."
     }
   },
   home: {

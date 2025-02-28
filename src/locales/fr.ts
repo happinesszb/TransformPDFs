@@ -91,7 +91,75 @@ export default {
     unlockPdf: {
       title: "Déchiffrer PDF",
       description: "Supprimer la protection par mot de passe des fichiers PDF"
-    } 
+    },
+    epubToPdf: {
+      title: "EPUB → PDF",
+      description: "Convertissez des fichiers EPUB en PDF tout en préservant tout le contenu."
+    },
+    htmlToPdf: {
+      title: "HTML → PDF",
+      description: "Convertissez des fichiers MHT ou MHTML en PDF tout en préservant tout le contenu."
+    },
+    texToPdf: {
+      title: "Tex → PDF",
+      description: "Convertissez des documents avec des formules et des graphiques en PDF."
+    },
+    psToPdf: {
+      title: "PS → PDF",
+      description: "Convertissez des fichiers PostScript en PDF tout en préservant tout le contenu."
+    },
+    xslfoToPdf: {
+      title: "XSLFO → PDF",
+      description: "Convertissez des fichiers XSL Formatting Objects en PDF."
+    },
+    pclToPdf: {
+      title: "PCL → PDF",
+      description: "Convertissez des fichiers PCL en PDF."
+    },
+    svgToPdf: {
+      title: "SVG → PDF",
+      description: "Convertissez des fichiers SVG en PDF."
+    },
+    xmlToPdf: {
+      title: "XML → PDF",
+      description: "Convertissez des fichiers XML en PDF."
+    },
+    mdToPdf: {
+      title: "Markdown → PDF",
+      description: "Convertissez des fichiers Markdown en PDF."
+    },
+    pdfToHtml: {
+      title: "PDF → HTML",
+      description: "Convertissez des documents PDF en format HTML."
+    },
+    pdfToEpub: {
+      title: "PDF → EPUB",
+      description: "Convertissez des documents PDF en format EPUB."
+    },
+    pdfToTiff: {
+      title: "PDF → TIFF",
+      description: "Convertissez des documents PDF en format TIFF."
+    },
+    pdfToTex: {
+      title: "PDF → TEX",
+      description: "Convertissez des documents PDF en format LaTeX."
+    },
+    pdfToSvg: {
+      title: "PDF → SVG",
+      description: "Convertissez des documents PDF en format SVG."
+    },
+    pdfToXml: {
+      title: "PDF → XML",
+      description: "Convertissez des documents PDF en format XML."
+    },
+    pdfToMobi: {
+      title: "PDF → MOBI",
+      description: "Convertissez des documents PDF en format MOBI."
+    },
+    pdfToXps: {
+      title: "PDF → XPS",
+      description: "Convertissez des documents PDF en format XPS."
+    }
   },
   home: {
     title: "Simplifiez vos PDF",

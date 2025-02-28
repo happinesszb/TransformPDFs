@@ -6,7 +6,7 @@ export interface LocaleType {
     description: string
   }
   
-  //  
+  // 统一的工具定义
   toolsbar: {
     mergePdf: {
       title: string
@@ -48,7 +48,7 @@ export interface LocaleType {
       title: string
       description: string
     }
-    //  
+    // 新增的工具
     pdfToJpg: {
       title: string
       description: string
@@ -98,6 +98,74 @@ export interface LocaleType {
       title: string
       description: string
     }
+    epubToPdf: {
+      title: string;
+      description: string;
+    }
+    htmlToPdf: {
+      title: string;
+      description: string;
+    }
+    texToPdf: {
+      title: string;
+      description: string;
+    };
+    psToPdf: {
+      title: string;
+      description: string;
+    };
+    xslfoToPdf: {
+      title: string;
+      description: string;
+    };
+    pclToPdf: {
+      title: string;
+      description: string;
+    };
+    svgToPdf: {
+      title: string;
+      description: string;
+    };
+    xmlToPdf: {
+      title: string;
+      description: string;
+    };
+    mdToPdf: {
+      title: string;
+      description: string;
+    };
+    pdfToHtml: {
+      title: string;
+      description: string;
+    };
+    pdfToEpub: {
+      title: string;
+      description: string;
+    };
+    pdfToTiff: {
+      title: string;
+      description: string;
+    };
+    pdfToTex: {
+      title: string;
+      description: string;
+    };
+    pdfToSvg: {
+      title: string;
+      description: string;
+    };
+    pdfToXml: {
+      title: string;
+      description: string;
+    };
+    pdfToMobi: {
+      title: string;
+      description: string;
+    };
+    pdfToXps: {
+      title: string;
+      description: string;
+    };
   }
 
   home: {
@@ -397,5 +465,5 @@ export interface LocaleType {
   }
 }
 
-//  
+// 可以添加工具类型的辅助类型定义
 export type ToolKeys = keyof LocaleType['toolsbar'] 
